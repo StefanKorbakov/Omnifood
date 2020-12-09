@@ -65,4 +65,21 @@ $(document).ready(function() {
         offset: '50%'
     });
     
+    
+    /* Mobile navigation */
+    
+    $('.js--nav-icon').click(function(){
+        const nav = $('.js--main-nav')
+        const icon = $('.js--nav-icon ion-icon')
+       
+        nav.slideToggle(200)
+ 
+        
+        if (icon[0].name == 'menu-outline') {
+            icon[0].name = 'close-outline'
+        } else if (icon[0].name == 'close-outline') {
+            icon[0].name = 'menu-outline'
+        }
+    });
+    
 });
